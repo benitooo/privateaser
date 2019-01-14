@@ -146,6 +146,30 @@ const actors = [{
   }]
 }];
 
+//const time_component = (events[0].time)*(bars[0].pricePerHour);
+function time_component(){
+	
+	for( i=0;i<events.length;i++)
+	{
+		for(int j=0;j<bars.length;j++)
+		{
+			if(events[i].barId==bars[j].id)
+			{
+				return (events[i].time)*(bars[j].pricePerHour);
+			}
+		}
+	}
+	for(int i=0;i<tab.length;i++)
+	{
+		console.log(tab[i]);
+	}
+	return tab;
+}
+
+console.log(time_component);
 console.log(bars);
 console.log(events);
 console.log(actors);
+
+
+
